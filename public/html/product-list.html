@@ -1,0 +1,27 @@
+<div style="flex-direction: row">
+    <h3>Product List</h3>
+    <!-- <button ng-click="addProduct()">add</button> -->
+</div>
+<div>
+    <div>
+        <input ng-model="info.searchForm" /><button ng-click="search()">search</button>
+    </div>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th ng-click="sort('name')">Name</th>
+            <th ng-click="sort('brand')">Brand</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="product in productlist">
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.brand}}</td>
+            <td>
+                <button ng-click="setProduct( product )">
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

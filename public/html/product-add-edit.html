@@ -1,0 +1,10 @@
+<form>
+    <header ng-if="info.edit === false">Add Product</header>
+    <header ng-if="info.edit === true">Edit Product {{info.code}}</header>
+    <label ng-if="info.edit === true">Code</label> <input type="number" ng-if="info.edit === true" ng-model="info.newCode" ng-change="checkNumber()"/> <br>
+    <label>Brand</label> <input ng-model="info.brand" /> <br>
+    <label>Name</label> <input ng-model="info.name" />
+</form>
+<button ng-if="info.edit === false" ng-click="add()">Add</button>
+<button ng-if="info.edit === true" ng-click="edit()">Set</button>
+<button ng-if="info.edit === true" ng-click="cancel()">Cancel</button>

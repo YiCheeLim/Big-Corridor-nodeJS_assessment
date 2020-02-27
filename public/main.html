@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+    <head>
+        <title></title>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+
+        <script src="js/main.controller.js"></script>
+
+        <style>
+            table, td, tr {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body  ng-controller="mainController">
+        <div ng-view></div>
+    </body>
+</html>
